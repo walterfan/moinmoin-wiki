@@ -65,7 +65,7 @@ class Config(multiconfig.DefaultConfig):
     # Wiki identity ----------------------------------------------------
 
     # Site name, used by default for wiki name-logo [Unicode]
-    sitename = u'Untitled Wiki'
+    sitename = u'Personal Wiki'
 
     # Wiki logo. You can use an image, text or both. [Unicode]
     # For no logo or text, use '' - the default is to show the sitename.
@@ -92,7 +92,8 @@ class Config(multiconfig.DefaultConfig):
 
     # This is checked by some rather critical and potentially harmful actions,
     # like despam or PackageInstaller action:
-    superuser = [u"mmAdmin", ]
+    #superuser = [u"YourName", ]
+    superuser = [u"walter", ]
 
     # Some actions are by default only enabled for superusers and disabled
     # for everybody else.
@@ -101,17 +102,17 @@ class Config(multiconfig.DefaultConfig):
     # A superuser also can use "Settings" -> "Switch user" to create users.
     # If you need the newaccount action for everybody (e.g. to create your
     # very first [superuser] account), you can (temporarily) enable it:
-    actions_superuser = multiconfig.DefaultConfig.actions_superuser[:]
-    actions_superuser.remove('newaccount')
+    #actions_superuser = multiconfig.DefaultConfig.actions_superuser[:]
+    #actions_superuser.remove('newaccount')
 
     # IMPORTANT: grant yourself admin rights! replace YourName with
     # your user name. See HelpOnAccessControlLists for more help.
     # All acl_rights_xxx options must use unicode [Unicode]
-    #acl_rights_before = u"mmAdmin:read,write,delete,revert,admin"
+    acl_rights_before = u"walter:read,write,delete,revert,admin"
 
     # This is the default ACL that applies to pages without an ACL.
     # Adapt it to your needs, consider using an EditorGroup.
-    acl_rights_default = u"Trusted:read,write,delete,revert Known:read All:read,write,delete,revert"
+    acl_rights_default = u"Trusted:read,write,delete,revert Known:read All:"
 
     # The default (ENABLED) password_checker will keep users from choosing too
     # short or too easy passwords. If you don't like this and your site has
