@@ -20,7 +20,8 @@ RUN apt-get update && apt-get install -qqy --no-install-recommends \
   uwsgi \
   uwsgi-plugin-python \
   rsyslog \
-  busybox
+  busybox \
+  python-docutils
 
 # Download MoinMoin
 RUN curl -OkL \
