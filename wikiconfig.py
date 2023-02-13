@@ -102,8 +102,8 @@ class Config(multiconfig.DefaultConfig):
     # A superuser also can use "Settings" -> "Switch user" to create users.
     # If you need the newaccount action for everybody (e.g. to create your
     # very first [superuser] account), you can (temporarily) enable it:
-    #actions_superuser = multiconfig.DefaultConfig.actions_superuser[:]
-    #actions_superuser.remove('newaccount')
+    actions_superuser = multiconfig.DefaultConfig.actions_superuser[:]
+    actions_superuser.remove('newaccount')
 
     # IMPORTANT: grant yourself admin rights! replace YourName with
     # your user name. See HelpOnAccessControlLists for more help.
@@ -112,7 +112,7 @@ class Config(multiconfig.DefaultConfig):
 
     # This is the default ACL that applies to pages without an ACL.
     # Adapt it to your needs, consider using an EditorGroup.
-    acl_rights_default = u"Trusted:read,write,delete,revert Known:read All:"
+    acl_rights_default = u"Trusted:read,write,delete,revert Known:read All:read,write,delete,revert"
 
     # The default (ENABLED) password_checker will keep users from choosing too
     # short or too easy passwords. If you don't like this and your site has

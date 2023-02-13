@@ -1,11 +1,11 @@
-# VERSION 0.7
-# AUTHOR:         Olav Grønås Gjerde <olav@backupbay.com>
+# VERSION 0.1
+# AUTHOR:         Walter Fan <walter.fan@gmail.com>, Olav Grønås Gjerde <olav@backupbay.com>
 # DESCRIPTION:    Image with MoinMoin wiki, uwsgi, nginx and self signed SSL
 # TO_BUILD:       docker build -t moinmoin .
 # TO_RUN:         docker run -d -p 80:80 -p 443:443 --name my_wiki moinmoin
 
 FROM debian:buster-slim
-MAINTAINER Olav Grønås Gjerde <olav@backupbay.com>
+MAINTAINER Walter Fan <walter.fan@gmail.com>, Olav Grønås Gjerde <olav@backupbay.com>
 
 # Set the version you want of MoinMoin
 ENV MM_VERSION 1.9.10

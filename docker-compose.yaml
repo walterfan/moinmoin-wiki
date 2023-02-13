@@ -1,0 +1,13 @@
+# VERSION 0.1
+# AUTHOR:         Walter Fan <walter.fan@gmail.com>
+services:
+  webapp:
+    image: walterfan/moinmoin-wiki
+    container_name: moinmoin-wiki
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./data:/usr/local/share/moin/data
+      - ./wikiconfig.py:/usr/local/share/moin/wikiconfig.py
